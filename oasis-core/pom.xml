@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>io.askcuix.oasis</groupId>
+		<artifactId>oasis</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<artifactId>oasis-core</artifactId>
+	<packaging>jar</packaging>
+	<name>oasis-core</name>
+	<modelVersion>4.0.0</modelVersion>
+	<description>OASIS core project</description>
+
+	<dependencies>
+	</dependencies>
+
+</project>
