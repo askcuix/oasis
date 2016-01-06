@@ -14,7 +14,7 @@
 	<description>OASIS redis project</description>
 
 	<properties>
-		<jedis_ver>2.7.3</jedis_ver>
+		<jedis_ver>2.8.0</jedis_ver>
 	</properties>
 
 	<dependencies>
