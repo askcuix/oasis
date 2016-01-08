@@ -1,20 +1,18 @@
 package io.askcuix.oasis.redis.sentinel;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
-
+import io.askcuix.oasis.core.util.CollectionUtil;
 import io.askcuix.oasis.redis.util.RedisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import io.askcuix.oasis.redis.util.CollectionUtil;
-
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPubSub;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 import redis.clients.jedis.exceptions.JedisException;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class SentinelEventListener {
     private static final Logger logger = LoggerFactory.getLogger(SentinelEventListener.class);
@@ -72,7 +70,7 @@ public class SentinelEventListener {
                 if (slaveList == null) {
                     slaveList = new ArrayList<HostAndPort>();
                 }
-                logger.info("Found redis slaves[{}] at {}", masterName, CollectionUtil.join(slaveList, ", "));
+                logger.info("Found redis slaves[{}] at {}", masterName, CollectionUtil.convertToString(slaveList, ", "));
 
                 break;
             } catch (JedisConnectionException e) {

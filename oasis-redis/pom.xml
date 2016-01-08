@@ -5,6 +5,7 @@
 		<groupId>io.askcuix.oasis</groupId>
 		<artifactId>oasis</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../</relativePath>
 	</parent>
 	
 	<artifactId>oasis-redis</artifactId>
@@ -13,16 +14,35 @@
 	<modelVersion>4.0.0</modelVersion>
 	<description>OASIS redis project</description>
 
-	<properties>
-		<jedis_ver>2.8.0</jedis_ver>
-	</properties>
-
 	<dependencies>
+		<dependency>
+			<groupId>io.askcuix.oasis</groupId>
+			<artifactId>oasis-core</artifactId>
+			<version>${oasis_ver}</version>
+		</dependency>
+
 		<!-- Redis -->
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
 			<version>${jedis_ver}</version>
+		</dependency>
+
+		<!-- Log -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j_ver}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>${slf4j_ver}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>${slf4j_ver}</version>
 		</dependency>
 
 		<!-- Testing -->

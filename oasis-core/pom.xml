@@ -5,6 +5,7 @@
 		<groupId>io.askcuix.oasis</groupId>
 		<artifactId>oasis</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../</relativePath>
 	</parent>
 	
 	<artifactId>oasis-core</artifactId>
@@ -14,6 +15,14 @@
 	<description>OASIS core project</description>
 
 	<dependencies>
+		<!-- JSON -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson_ver}</version>
+			<optional>true</optional>
+		</dependency>
+
 	</dependencies>
 
 </project>
